@@ -152,7 +152,7 @@ for iDataset = 1:length(datasets)
 % 
             resultsIndex = (i-1)*nImagesPerSubj + j;
             allCorrs(resultsIndex,iDataset) = corr(imOrig(:), imRefaced(:));
-            allSSIMs(resultsIndex,iDataset) = ssim(imOrig, imRefaced);
+            allSSIMs(resultsIndex,iDataset) = ssim(imOrig/255, imRefaced/255);
         end
     end
 

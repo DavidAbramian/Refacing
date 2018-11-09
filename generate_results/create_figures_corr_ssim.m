@@ -154,7 +154,7 @@ for i = 1:numTestImages
         
         resultsIndex = (i-1)*nImagesPerSubj + j;
         allCorrs(resultsIndex) = corr(imOrig(:), imRefaced(:));
-        allSSIMs(resultsIndex) = ssim(imOrig, imRefaced);
+        allSSIMs(resultsIndex) = ssim(imOrig/255, imRefaced/255);
     end
 end
 
